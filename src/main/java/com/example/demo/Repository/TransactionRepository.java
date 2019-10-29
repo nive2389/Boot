@@ -13,8 +13,11 @@ import com.example.demo.entity.Transaction;
 @Repository
 public interface TransactionRepository extends JpaRepository<Transaction, Long>
 {
-	@Query("select tr from Transaction tr where accountId=?1 and valueDate between ?2 and ?3")
-	List<Transaction> findAllByIdandDate(Long accountNumber, String startdate, String enddate);
+	/*
+	 * @Query("select tr from Transaction tr where accountId=?1 and valueDate between ?2 and ?3"
+	 * ) List<Transaction> findAllByIdandDate(Long accountNumber, String startdate,
+	 * String enddate);
+	 */
 
 	@Query("select t from Transaction t where accountid=?1")
 	List<Transaction> findAllById(Long accountNumber);

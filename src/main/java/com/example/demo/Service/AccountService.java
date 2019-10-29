@@ -14,7 +14,6 @@ import com.example.demo.Repository.AccountRepository;
 
 import com.example.demo.entity.Account;
 
-
 @Service
 public class AccountService {
 	
@@ -35,12 +34,13 @@ public AccountDTO getAccountDetails(Long accountNumber) throws CustomException{
 	
 }
 /* out of scope */
-public void addAccount(AccountDTO accountDto) throws CustomException {
+public Boolean addAccount(AccountDTO accountDto) throws CustomException {
 	// TODO Auto-generated method stub
 	if(accountrepo.existsById(accountDto.getAccountNumber())) {
 		throw new CustomException("Account already Exist");
 	}
 	Account acc = AccountDTO.valueOf(accountDto);
 	accountrepo.saveAndFlush(acc);
+	return true;
 }
 }

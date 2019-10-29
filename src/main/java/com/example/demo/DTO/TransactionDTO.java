@@ -56,10 +56,10 @@ public void setId(Long id) {
 }
 /*public AccountDTO getAccount() {
 	return account;
-}
+}*/
 public void setAccount(AccountDTO account) {
 	this.account = account;
-}*/
+}
 public Date getValueDate() {
 	return valueDate;
 }

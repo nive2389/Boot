@@ -28,19 +28,6 @@ public class TransactionService {
 	if(transDetailslist.isEmpty()) {
 		throw new CustomException("No transaction done");
 	}
-	/*for(Transaction t: transDetailslist)
-	{
-		TransactionDTO td=new TransactionDTO();
-		
-		td.setId(t.getId());
-		td.setAccountType(t.getAccountType());
-		td.setAccSummary(t.getAccSummary());
-		td.setCreditAmt(t.getCreditAmt());
-		td.setCurrency(t.getCurrency());
-		td.setValueDate(t.getValueDate());
-		tdto.add(td);
-		
-	}*/
 	
 	List<TransactionDTO> transactionDto = new ArrayList<TransactionDTO>();
 	for (Transaction trans: transDetailslist) {
